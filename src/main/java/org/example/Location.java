@@ -8,6 +8,7 @@ public class Location {
     private int x;
     private int y;
 
+
     private ArrayList<ArrayList<Integer>> range = new ArrayList<>();
     public int rangeLimit = 1;
 
@@ -26,13 +27,11 @@ public class Location {
     }
     private void putRange(){
         int i, j;
-//        System.out.println("\nRange:");
         for(i = -rangeLimit; i <= rangeLimit; i++){
             for(j = -rangeLimit; j <= rangeLimit; j++){
                 ArrayList<Integer> coordinate = new ArrayList<>();
                 coordinate.add(this.x + i);
                 coordinate.add(this.y + j);
-//                System.out.println("("+(this.x + i) + ", " + (this.y + j) + ")");
                 range.add(coordinate);
             }
         }
@@ -43,6 +42,10 @@ public class Location {
     }
     public String name(){
         return this.name;
+    }
+    public String ToString(){
+        return this.name +
+                " ("+ this.x +", "+ this.y + ")";
     }
 
 }

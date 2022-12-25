@@ -49,60 +49,33 @@ public class Map {
     private boolean isOverlap(Location newLocation){
         int i;
         for (Location location: mapList) {
-            System.out.println("\nmap:\n"+
-                    "("+location.Coordinate().get(0) +", "+ location.Coordinate().get(1)+")\n");
-            for(i = 0; i < newLocation.getRange().size(); i++){
-                System.out.println("("+newLocation.getRange().get(i).get(0) +", "+ newLocation.getRange().get(i).get(1)+")");
-                if(newLocation.getRange().get(i).get(0) == location.Coordinate().get(0)){
-                    if(newLocation.getRange().get(i).get(1) == location.Coordinate().get(1)){
-                        System.out.println("new Location is overlap " + location.name());
-                        return  true;
-                    }
+            for(ArrayList<Integer> coordinate: newLocation.getRange()){
+                if(coordinate.get(0) == location.Coordinate().get(0) && coordinate.get(1) == location.Coordinate().get(1)){
+                    return  true;
                 }
             }
-
         }
         return false;
     }
 
+
     public void showMapList(){
+        System.out.println("\nMap: ");
         for (Location location: mapList) {
             System.out.println(location.name() + " (" + location.Coordinate().get(0) + ", "+location.Coordinate().get(1) +")");
         }
     }
-//    public void drawMap(){
-//        int i,j;
-//        ArrayList<ArrayList<Integer>> allLocation = AllLocation();
-////        char map[][] = new char[this.width][this.length];
-//        for(j = 0; j < this.width; j++){
-//            for(i = 0; i < this.length; i++){
-////                for (ArrayList<Integer> coordinate: allLocation) {
-////                    if(i == coordinate.get(0) && j == coordinate.get(1)){
-////                        allLocation.remove(coordinate);
-//                        System.out.print("x");
-////                    }
-////                }
-////                map[i][j] = '-';
-//                System.out.print("-");
-//            }
-//            System.out.println();
-//        }
-//
-//    }
-//    private ArrayList<ArrayList<Integer>> AllLocation(){
-//        int i;
-//        ArrayList<ArrayList<Integer>> allLocation = new ArrayList<>();
-//        for (Location location: mapList) {
-//            for(i = 0; i < location.getRange().size(); i++){
-//                ArrayList<Integer> coordinate = new ArrayList<>();
-//                coordinate.add(location.getRange().get(i).get(0));
-//                coordinate.add(location.getRange().get(i).get(1));
-//                allLocation.add(coordinate);
-//            }
-//        }
-//        return allLocation;
-//    }
-//
 
+    public String FindLocation(int x, int y){
+
+        for (Location location: mapList) {
+            for(ArrayList<Integer> coordinate: location.getRange()){
+                if(x == coordinate.get(0) && y == coordinate.get(1)){
+                    return location.ToString();
+                }
+            }
+        }
+        return "Can't find this place!";
+    }
 
 }
