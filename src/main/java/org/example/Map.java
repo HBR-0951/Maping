@@ -24,6 +24,9 @@ public class Map {
         PutLocation(new Location("supermarket", 70, 30));
     }
     public boolean PutLocation(Location newLocation){
+        return CheckLocation(newLocation);
+    }
+    private boolean CheckLocation(Location newLocation){
         if(mapList.isEmpty()){
             mapList.add(newLocation);
             return true;
@@ -78,5 +81,6 @@ public class Map {
         }
         return "Can't find this place!";
     }
+
 
 }
