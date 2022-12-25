@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.MapTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-25T13:59:59" hostname="DESKTOP-RBN445P" time="0.017">
+  <properties/>
+  <testcase name="showMapList()" classname="org.example.MapTest" time="0.015"/>
+  <testcase name="putLocation()" classname="org.example.MapTest" time="0.001"/>
+  <testcase name="findLocation()" classname="org.example.MapTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
