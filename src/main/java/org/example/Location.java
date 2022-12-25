@@ -19,9 +19,12 @@ public class Location {
         this.y = y;
         coordinate.add(x);
         coordinate.add(y);
-        putRange();
+        OnInitialized();
     }
 
+    private void OnInitialized(){
+        putRange();
+    }
     public ArrayList<Integer> Coordinate(){
         return  coordinate;
     }
@@ -35,14 +38,12 @@ public class Location {
                 range.add(coordinate);
             }
         }
-//        System.out.println();
+
     }
     public ArrayList<ArrayList<Integer>> getRange(){
         return range;
     }
-    public String name(){
-        return this.name;
-    }
+
     public String ToString(){
         return this.name +
                 " ("+ this.x +", "+ this.y + ")";

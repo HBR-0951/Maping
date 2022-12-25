@@ -1,8 +1,6 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.lang.Math;
 
 public class Map {
     private int width = 0;
@@ -24,6 +22,10 @@ public class Map {
         PutLocation(new Location("supermarket", 70, 30));
     }
     public boolean PutLocation(Location newLocation){
+        return CheckLocation(newLocation);
+    }
+
+    private boolean CheckLocation(Location newLocation){
         if(mapList.isEmpty()){
             mapList.add(newLocation);
             return true;
@@ -51,7 +53,8 @@ public class Map {
         for (Location location: mapList) {
             for(ArrayList<Integer> coordinate: newLocation.getRange()){
                 if(coordinate.get(0) == location.Coordinate().get(0) && coordinate.get(1) == location.Coordinate().get(1)){
-                    return  true;
+                    System.out.println("new Location is overlap!");
+                    return true;
                 }
             }
         }
@@ -60,7 +63,7 @@ public class Map {
 
 
     public void showMapList(){
-        System.out.println("\nMap: ");
+        System.out.println("\nMap:");
         for (Location location: mapList) {
             System.out.println(location.ToString());
         }
@@ -78,5 +81,6 @@ public class Map {
         }
         return "Can't find this place!";
     }
+
 
 }
