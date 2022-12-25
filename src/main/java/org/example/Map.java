@@ -62,7 +62,7 @@ public class Map {
     public void showMapList(){
         System.out.println("\nMap: ");
         for (Location location: mapList) {
-            System.out.println(location.name() + " (" + location.Coordinate().get(0) + ", "+location.Coordinate().get(1) +")");
+            System.out.println(location.ToString());
         }
     }
 
