@@ -64,6 +64,7 @@ public class Map {
         for (Location location: mapList) {
             System.out.println(location.ToString());
         }
+        System.out.println();
     }
 
     public String FindLocation(int x, int y){
