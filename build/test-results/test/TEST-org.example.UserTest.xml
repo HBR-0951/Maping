@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.UserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-25T13:59:59" hostname="DESKTOP-RBN445P" time="0.001">
+<testsuite name="org.example.UserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-25T14:15:57" hostname="DESKTOP-RBN445P" time="0.001">
   <properties/>
   <testcase name="isLogIn()" classname="org.example.UserTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
